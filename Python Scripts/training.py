@@ -28,4 +28,5 @@ def train_model(filename):
 
     clf = VotingClassifier(estimators=estimator, voting='soft')
     clf.fit(x_train, y_train)
+    print('Model Trained')
     return clf

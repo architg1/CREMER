@@ -14,7 +14,7 @@ def evaluation_report(y, y_hat):
     print('True Positive:', tp)
     print('False Positive:', fp)
     print('Recall: ', sklearn.metrics.recall_score(y, y_hat))
-    print('ROC AUC Score: ', sklearn.metrics.roc_auc_score(y, y_hat))
+    print('AUROC Score: ', sklearn.metrics.roc_auc_score(y, y_hat))
     return sklearn.metrics.roc_auc_score(y, y_hat)
     # Positive is SEU
 
