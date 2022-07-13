@@ -29,3 +29,9 @@ void detect_seu(){
         }
     }
 }
+
+int main(){
+    printf("hello");
+    detect_seu();
+    return 0;
+}
