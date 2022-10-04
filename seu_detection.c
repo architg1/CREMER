@@ -8,7 +8,7 @@
 int result[numThreads];
 
 void *factorial_10(void* idp){
-    result[(int)idp] = 10*9*8*7*6*4*3*2;
+    result[(intptr_t)idp] = 10*9*8*7*6*4*3*2;
     pthread_exit(NULL);
 }
 
