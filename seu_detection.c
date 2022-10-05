@@ -8,7 +8,9 @@
 int result[numThreads];
 
 void *factorial_10(void* idp){
-    result[(int)idp] = 10*9*8*7*6*4*3*2;
+    int threadid;
+    threadid=(intptr_t)idp;
+    result[threadid] = 10*9*8*7*6*4*3*2; // bad access
     pthread_exit(NULL);
 }
 
@@ -31,7 +33,8 @@ void detect_seu(){
 }
 
 int main(){
-    printf("hello");
+    printf("Process Started");
     detect_seu();
+    printf("ended");
     return 0;
 }
