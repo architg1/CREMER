@@ -10,7 +10,7 @@ int result[numThreads];
 void *factorial_10(void* idp){
     int threadid;
     threadid=(intptr_t)idp;
-    result[threadid] = 10*9*8*7*6*4*3*2; // bad access
+    result[threadid] = 10*9*8*7*6*4*3*2; 
     pthread_exit(NULL);
 }
 
